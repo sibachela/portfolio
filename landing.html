@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy Classic Video CD - "Never Gonna Give You Up"</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <header id="header">
+    <img id="header-img" src="https://www.logoground.com/uploads12/dv12y2023734882023-08-013688191Letter%20CD%20DC%20Logo.webp" alt="Video CD Logo" width="60" height="60">
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#how-it-works">Preview</a>
+      <a class="nav-link" href="#pricing">Buy Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Original 1987 music video: "Never Gonna Give You Up"</li>
+        <li>High-quality Video CD format</li>
+        <li>Playable on most DVD/CD players</li>
+        <li>Bonus: Behind-the-scenes interview with Rick Astley</li>
+        <li>Worldwide shipping available</li>
+      </ul>
+    </section>
+
+    <section id="how-it-works">
+      <h2>Preview</h2>
+      <div style="display: flex; justify-content: center;">
+        <iframe
+          id="video"
+          width="420"
+          height="236"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p style="text-align:center; margin-top:1em;">Watch a preview of the classic hit before you buy!</p>
+    </section>
+
+    <section id="pricing">
+      <h2>Buy Now</h2>
+      <div class="pricing-flex">
+        <div class="price-card">
+          <h3>Standard Video CD</h3>
+          <p>$14.99</p>
+          <ul>
+            <li>1x Video CD</li>
+            <li>Full-length music video</li>
+            <li>Jewel case packaging</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Collector's Edition</h3>
+          <p>$24.99</p>
+          <ul>
+            <li>1x Video CD</li>
+            <li>Bonus interview</li>
+            <li>Retro cover art</li>
+            <li>Signed insert (limited!)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="signup">
+      <h2>Order Your Video CD</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email address for order confirmation"
+          required
+        >
+        <input id="submit" type="submit" value="Buy Now">
+      </form>
+      <p style="text-align:center; margin-top:1em; color:#555;">We will send you a confirmation and payment instructions.</p>
+    </section>
+  </main>

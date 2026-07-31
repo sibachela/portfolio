@@ -1,0 +1,50 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+   background-image: url("https://cdn.hotelsmotor.com/262/26146/Lunga_Rest_Lodge-Lusaka-Zambia03_large.webp");
+    color: #f5f6f7;
+    font-family: Tahoma;
+    background-size: cover;
+    font-size: 16px;
+  }
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #085ad4;
+  }
+  button {
+    
+        background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+        box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+      text-decoration: antiquewhite;
+        display: block;
+        width: 60%;
+        margin: 1em auto;
+        height: 2em;
+        font-size: 1.1rem;
+        border-color: white;
+        min-width: 300px;
+      }
+      input, textarea {
+        background-color: #0606aa;
+        border: 1px solid #0a0a23;
+        color: #ffffff;
+      }
+      label {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      h1, p {
+        margin: 1em auto;
+        text-align: center;
+      }
+      .form {
+        width: 80%;
+        background-color: rgb(34, 137, 233),70%;
+      
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        max-width: 500px;
+      }

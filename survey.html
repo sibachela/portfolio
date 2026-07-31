@@ -1,0 +1,47 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="survey.css">
+   <h1 id="title">survey form</h1>
+    
+</head>
+<body>
+    <p id="description">This survey form is to help us improve our services so feel free to give us your feedback</p>
+    <div class="form">
+    <form id="survey-form">
+        <fieldset>
+       <label id="name-label"> Name <input id="name" type="text" placeholder="Enter full name" required></label>
+       <label id="email-label">Email <input id="email" type="email" placeholder="enter email address" required></label>
+       <label id="number-label">number of visits<input id="number" type="number" min="2" max="10" pattern="[0-9]{10}" placeholder="number of visits" required></label>
+            </fieldset>
+            <label for="referrer">How did you hear about us?
+        <select id="dropdown">
+            <option value="1">From a friend</option>
+            <option value="2">Seen the post aside great north road</option>
+        </select>
+            </label>
+            <fieldset>
+                <legend>State your Visit (required)</legend>
+        <label for="personal-visit"><input id="personal-visit" type="radio" name="Visit-type" value="personal"  /> Personal</label>
+        <label for="business-visit"><input id="business-visit" type="radio" name="Visit-type" value="Business"  /> Business</label>
+    </fieldset>
+        <fieldset>
+      <label for="rate">How do you rate our services?.
+        <input id="bad" type="checkbox" name="services" value="bad" checked> <label for="bad">bad</label>
+        <input id="A bit good" type="checkbox" name="services" value="A bit good"> <label for="A bit good">A bit good</label>
+        <input id="very good" type="checkbox" name="services" value="very good"> <label for="very good">very good</label>
+    </label>
+        <label for="feedback">Provide a feedback:
+            <textarea id="feedback" name="feedback" rows="3" cols="30" placeholder="help us improve..."></textarea></label>
+            </fieldset>
+            <button id="submit">Submit</button>
+
+
+
+
+
+     </form>
+    </div>
+</body>
+</html>

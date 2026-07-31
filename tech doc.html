@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tech doc.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>PAGE CONTENT</header>
+        <ul>
+            <li><a class="nav-link" href="#The_JavaScript_Environment">The JavaScript Environment</a></li>
+            <li><a class="nav-link" href="#Declaring_and_Initializing_Variables">Declaring and Initializing Variables</a></li>
+            <li><a class="nav-link" href="#Arithmetic_and_Math_Library_Functions_in_JavaScript">Arithmetic and Math Library Functions in JavaScript</a></li>
+            <li><a class="nav-link" href="#Decision_Constructs">Decision Constructs</a></li>
+            <li><a class="nav-link" href="#Repetition_Constructs">Repetition Constructs</a></li>
+            <li><a class="nav-link" href="#Functions">Functions</a></li>
+            <li><a class="nav-link" href="#Variable_Scope">Variable Scope</a></li>
+            <li><a class="nav-link" href="#Recursion">Recursion</a></li>
+            <li><a class="nav-link" href="#Objects_and_Object-Oriented_Programming">Objects and Object-Oriented Programming</a></li>
+            <li><a class="nav-link" href="#Summary">Summary</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="The_JavaScript_Environment" class="main-section">
+            <header>The JavaScript Environment</header>
+            <p> JavaScript has historically been a programming language that ran only inside a web
+              browser. However, in the past few years, there has been the development of JavaScript
+              programming environments that can be run from the desktop, or similarly, from a
+              server. In this book we use one such environment: the JavaScript shell that is part of
+              Mozilla’s comprehensive JavaScript environment known as SpiderMonkey.</p>
+                         <p> To download the JavaScript shell, navigate to the Nightly Build web page. Scroll to the
+              bottom of the page and pick the download that matches your computer system.</p>
+                         <p> Once you’ve downloaded the program, you have two choices for using the shell. You
+              can use it either in interactive mode or to interpret JavaScript programs stored in a
+              file. To use the shell in interactive mode, type the command js at a command prompt.
+              The shell prompt, js>, will appear and you are ready to start entering JavaScript ex
+             pressions and statements.</p>
+             
+             <p>
+             <code><p>The following is a typical interaction with the shell:</p>
+              js> 1
+              1
+              js> 1+2
+              3
+              js> var num = 1;
+              js> num*124
+              124
+              1
+             js> for (var i = 1; i < 6; ++i) {
+                 print(i);
+              }
+              1
+              2
+              3
+              4
+              5
+              js</code>
+             </p>
+        </section>
+        <section id="Declaring_and_Initializing_Variables" class="main-section">
+            <header>Declaring and Initializing Variables</header>
+            <p> JavaScript variables are global by default and, strictly speaking, don’t have to be declared
+              before using. When a JavaScript variable is initialized without first being declared, it
+              becomes a global variable. In this book, however, we follow the convention used with
+              compiled languages such as C++ and Java by declaring all variables before their first
+              use. The added benefit to doing this is that declared variables are created as local vari
+             ables. We will talk more about variable scope later in this chapter.</p>
+                         <p> To declare a variable in JavaScript, use the keyword var followed by a variable name,
+              and optionally, an assignment expression. Here are some examples:</p>
+                         <code> var number;
+              var name;
+              var rate = 1.2;
+              var greeting = "Hello, world!";
+              var flag = false</code>
+        </section>
+        <section id="Arithmetic_and_Math_Library_Functions_in_JavaScript" class="main-section">
+            <header>Arithmetic and Math Library Functions in JavaScript</header>
+            <p>JavaScript utilizes the standard arithmetic operators:</p>
+            <ul>
+                <li>+ (addition)</li>
+                <li>- (subtraction)</li>
+                <li>* (multiplication)</li>
+                <li>/ (division)</li>
+                <li>% (modulo)</li>
+            </ul>
+            <p>avaScript also has a math library you can use for advanced functions such as square
+                root, absolute value, and the trigonometric functions. The arithmetic operators follow
+                the standard order of operations, and parentheses can be used to modify that order.</p>
+            <p> examples of performing arithmetic in JavaScript, as well as
+                examples of using several of the mathematical functions.</p>
+                <code> var x = 3;
+                    var y = 1.1;
+                    print(x + y);
+                    print(x * y);
+                    print((x+y)*(x-y));
+                    var z = 9;
+                    print(Math.sqrt(z));
+                    print(Math.abs(y/x));</code>
+                    <p> The output from this program is:</p>
+                    <code>4.1
+                        3.3000000000000003
+                        7.789999999999999
+                        3
+                        0.3666666666666667</code>
+                        <p> If you don’t want or need the precision shown above, you can format a number to a
+                            fixed precision:</p>
+                            <code>var x = 3;
+                                var y = 1.1;
+                                var z = x * y;
+                                print(z.toFixed(2)); // displays 3.30</code>
+
+        </section>
+        <section id="Decision_Constructs" class="main-section">
+            <header>Decision Constructs</header>
+            <p> Decision constructs allow our programs to make decisions on what programming
+              statements to execute based on a Boolean expression. The two decision constructs we
+              use in this book are the if statement and the switch statement.
+              The if statement comes in three forms:</p>
+              <ul>
+                  <li>The simple if statement</li>
+                  <li>The if-else statement</li>
+                  <li>The if-else if statement</li>
+              </ul>
+              <code>
+                  Example 1-2 shows how to write a simple if statement.
+                  Example 1-2. The simple if statement
+                  var mid = 25;
+                  var high = 50;
+                  var low = 1;
+                  var current = 13;
+                  var found = -1;
+                  if (current < mid) {
+                    mid = (current-low) / 2;
+                  }
+                  Example 1-3 demonstrates the if-else statement.
+                  Example 1-3. The if-else statement
+                  var mid = 25;
+                  var high = 50;
+                  var low = 1;
+                  var current = 13;
+                  var found = -1;
+                  if (current < mid) {
+                    mid = (current-low) / 2;
+                  }else {
+                      mid = (current+high) / 2;
+                      }
+                      Example 1-4 illustrates the if-else if statement.
+                      Example 1-4. The if-else if statement
+                      var mid = 25;
+                      var high = 50;
+                      var low = 1;
+                      var current = 13;
+                      var found = -1;
+                      if (current < mid) {
+                      mid = (current-low) / 2;
+                      }
+                      else if (current > mid) {
+                      mid = (current+high) / 2;
+                      }
+                      else {
+                      found = current;
+                      }  
+              </code>
+          <p> The other decision structure we use in this book is the switch statement. This statement
+              provides a cleaner, more structured construction when you have several simple deci
+             sions to make. Example 1-5 demonstrates how the switch statement works.</p>
+         <code> Example 1-5. The switch statement
+          putstr("Enter a month number: ");
+          var monthNum = readline();
+          var monthName;
+          switch (monthNum) {
+          case "1":
+          monthName = "January";
+          break;
+          case "2":
+          monthName = "February";
+          break;
+          case "3":
+          monthName = "March";
+          break;
+          case "4":
+          monthName = "April";
+          break;
+          case "5":
+          monthName = "May";
+          break;
+          case "6":
+          monthName = "June";
+          break;
+          case "7":
+          monthName = "July";
+          break;
+          case "8":
+          monthName = "August";
+          break;
+          case "9":
+          monthName = "September";
+          break;
+          case "10":
+          monthName = "October";
+          break;
+          case "11":
+          monthName = "November";
+          break;
+          case "12":
+          monthName = "December";
+          break;
+          default:
+          print("Bad input");}
+          </code>
+             <p> Is this the most efficient way to solve this problem? No, but it does a great job of dem
+              onstrating how the switch statement works.
+               One major difference between the JavaScript switch statement and switch statements
+               in other programming languages is that the expression that is being tested in the state
+              ment can be of any data type, as opposed to an integral data type, as required by languages
+               such as C++ and Java. In fact, you’ll notice in the previous example that we use the
+               month numbers as strings, rather than converting them to numbers, since we can com
+              pare strings using the switch statement in JavaScript</p>
+        </section>
+        <section id="Repetition_Constructs" class="main-section">
+            <header>Repetition Constructs</header>
+            <p> Many of the algorithms we study in this book are repetitive in nature. We use two
+              repetition constructs in this book—the while loop and the for loop.
+              When we want to execute a set of statements while a condition is true, we use a while
+              loop. Example 1-6 demonstrates how the while loop works.</p>
+              <code>
+                  Example 1-6. The while loop
+                  var number = 1;
+                  var sum = 0;
+                  while (number < 11) {
+                  sum += number;
+                  ++number;
+                  }
+                  print(sum); // displays 55   
+              </code>
+          <p>When we want to execute a set of statements a specified number of times, we use a for
+              loop. Example 1-7 uses a for loop to sum the integers 1 through 10.</p>
+              <code>
+                  Example 1-7. Summing integers using a for loop
+                  var number = 1;
+                  var sum = 0;
+                  for (var number = 1; number < 11; number++) {
+                  sum += number;
+                  }
+                  print(sum); // displays 55    
+              </code>
+          <p> for loops are also used frequently to access the elements of an array, as shown in
+              Example 1-8.</p>
+          <code> Example 1-8. Using a for loop with an array
+              var numbers = [3, 7, 12, 22, 100];
+              var sum = 0;
+              for (var i = 0; i < numbers.length; ++i) {
+              sum += numbers[i];
+              }
+              print(sum); // displays 144</code>
+        </section>
+        <section id="Functions" class="main-section">
+            <header>Functions</header>
+            <p> JavaScript provides the means to define both value-returning functions and functions
+              that don’t return values (sometimes called subprocedures or void functions).
+              Example 1-9 demonstrates how value-returning functions are defined and called in
+              JavaScript.</p>
+              <code> Example 1-9. A value-returning function
+                  function factorial(number) {
+                  var product = 1;
+                  for (var i = number; i >= 1; --i) {
+                  product *= i;
+                  }
+                  return product;
+                  }
+                  print(factorial(4)); // displays 24
+                  print(factorial(5)); // displays 120
+                  print(factorial(10)); // displays 3628800
+              </code>
+          <p>Example 1-10 illustrates how to write a function that is used not for its return value, but
+              for the operations it performs.</p>
+              <code>Example 1-10. A subprocedure or void function in JavaScript
+                  function curve(arr, amount) {
+                  for (var i = 0; i < arr.length; ++i) {
+                  arr[i] += amount;
+                  }
+                  }
+                  var grades = [77, 73, 74, 81, 90];
+                  curve(grades, 5);
+                  print(grades); // displays 82,78,79,86,95
+              </code>
+          <p> All function parameters in JavaScript are passed by value, and there are no reference
+              parameters. However, there are reference objects, such as arrays, which are passed to
+              functions by reference, as was demonstrated in Example 1-10</p>
+        </section>
+        <section id="Variable_Scope" class="main-section">
+            <header>Variable Scope</header>
+            <p> The scope of a variable refers to where in a program a variable’s value can be accessed.
+              The scope of a variable in JavaScript is defined as function scope. This means that a
+              variable’s value is visible within the function definition where the variable is declared
+              and defined and within any functions that are nested within that function.</p>
+          <p> When a variable is defined outside of a function, in the main program, the variable is
+              said to have global scope, which means its value can be accessed by any part of a program,
+              including functions. The following short program demonstrates how global scope
+              works:</p>
+              <code> function showScope() {
+                  return scope;
+                  }
+                  var scope = "global";
+                  print(scope); // displays "global"
+                  print(showScope()); // displays "global"</code>
+          <p> The function showScope() can access the variable scope because scope is a global vari
+              able. Global variables can be declared at any place in a program, either before or after
+               function definitions.</p>
+               <p> Now watch what happens when we define a second scope variable within the show
+                  Scope() function:</p>
+          <code> function showScope() {
+              var scope = "local";
+              return scope;
+              }
+              var scope = "global";
+              print(scope); // displays "global"
+              print(showScope()); // displays "local"</code>
+              <p>The scope variable defined in the showScope() function has local scope, while the scope
+                  variable defined in the main program is a global variable. Even though the two variables
+                  have the same name, their scopes are different, and their values are different when
+                  accessed within the area of the program where they are defined.</p>
+              <p>All of this behavior is normal and expected. However, it can all change if you leave off
+                  the keyword var in the variable definitions. JavaScript allows you to define variables
+                  without using the var keyword, but when you do, that variable automatically has global
+                  scope, even if defined within a function.</p>
+              <p> Example 1-11 demonstrates the ramifications of leaving off the var keyword when
+                  defining variables.</p>
+                  <code> Example 1-11. The ramification of overusing global variables
+                      function showScope() {
+                      scope = "local";
+                      return scope;
+                      }
+                      scope = "global";
+                      print(scope); // displays "global"
+                      print(showScope()); // displays "local"
+                      print(scope); // displays "local"</code>
+                      <p> In Example 1-11, because the scope variable inside the function is not declared with the
+                          var keyword, when the string "local" is assigned to the variable, we are actually chang
+                         ing the value of the scope variable in the main program. You should always begin every
+                          definition of a variable with the var keyword to keep things like this from happening.</p>
+                      <p> Earlier, we mentioned that JavaScript has function scope. This means that JavaScript
+                          does not have block scope, unlike many other modern programming languages. With
+                          block scope, you can declare a variable within a block of code and the variable is not
+                          accessible outside of that block, as you typically see with a C++ or Java for loop:</p>
+                      <code> for (int i = 1; i <=10; ++i) {
+                          cout << "Hello, world!" << endl;
+                          }</code>
+                      <p> Even though JavaScript does not have block scope, we pretend like it does when we write
+                          for loops in this book:</p>
+                      <code> for (var i = 1; i <= 10; ++i ) {
+                          print("Hello, world!");
+                          }</code>
+                      <p>We don’t want to be the cause of you picking up bad programming habits.</p>
+        </section>
+        <section id="Recursion" class="main-section">
+            <header>Recursion</header>
+            <p> Function calls can be made recursively in JavaScript. The factorial() function defined
+              earlier can also be written recursively, like this:</p>
+              <code> function factorial(number) {
+                  if (number == 1) {
+                  return number;
+                  }
+                  else {
+                  return number * factorial(number-1);
+                  }
+                  }
+                  print(factorial(5));</code>
+          <p>When a function is called recursively, the results of the function’s computation are tem
+              porarily suspended while the recursion is in progress. To demonstrate how this works,
+               here is a diagram for the factorial() function when the argument passed to the func
+              tion is 5:</p>
+              <code> 5 * factorial(4)
+                  5 * 4 * factorial(3)
+                  5 * 4 * 3 * factorial(2)
+                  5 * 4 * 3 * 2 * factorial(1)
+                  5 * 4 * 3 * 2 * 1
+                  5 * 4 * 3 * 2
+                  5 * 4 * 6
+                  5 * 24
+                  120</code>
+          <p> Several of the algorithms discussed in this book use recursion. For the most part, Java
+              Script is capable of handling fairly deep recursive calls (this is an example of a relatively
+               shallow recursive call); but in one or two situations, an algorithm requires a deeper
+               recursive call than JavaScript can handle and we instead pursue an iterative solution to
+               the algorithm. You should keep in mind that any function that uses recursion can be
+               rewritten in an iterative manner.</p>
+        </section>
+        <section id="Objects_and_Object-Oriented_Programming" class="main-section">
+            <header>Objects and Object-Oriented Programming</header>
+            <p>The data structures discussed in this book are implemented as objects. JavaScript pro
+              vides many different ways for creating and using objects. In this section we demonstrate
+               the techniques used in this book for creating objects and for creating and using an
+               object’s functions and properties.</p>
+          <p>Objects are created by defining a constructor function that includes declarations for an
+              object’s properties and functions, followed by definitions for the functions. Here is the
+              constructor function for a checking account object:</p>
+              <code>function Checking(amount) {
+                  this.balance = amount; // property
+                  this.deposit = deposit; // function
+                  this.withdraw = withdraw; // function
+                  this.toString = toString; // function
+                  }</code>
+          <p> The this keyword is used to tie each function and property to an object instance. Now
+              let’s look at the function definitions for the preceding declarations:</p>
+          <code> function deposit(amount) {
+              this.balance += amount;
+              }
+              function withdraw(amount) {
+              if (amount <= this.balance) {
+              this.balance -= amount;
+              }
+              if (amount > this.balance) {
+              print("Insufficient funds");
+              }
+              }
+              function toString() {
+              return "Balance: " + this.balance;
+              }</code>
+              <p> Again, we have to use the this keyword with the balance property in order for the
+                  interpreter to know which object’s balance property we are referencing.</p>
+                  <p>Example 1-12 provides the complete definition for the checking object along with a test
+                      program.</p>
+                      <code> Example 1-12. Defining and using the Checking object
+                          function Checking(amount) {
+                          this.balance = amount;
+                          this.deposit = deposit;
+                          this.withdraw = withdraw;
+                          this.toString = toString;
+                          }
+                          function deposit(amount) {
+                          this.balance += amount;
+                          }
+                          function withdraw(amount) {
+                          if (amount <= this.balance) {
+                          this.balance -= amount;
+                          }
+                          if (amount > this.balance) {
+                          print("Insufficient funds");
+                          }
+                          }
+                          function toString() {
+                          return "Balance: " + this.balance;
+                          }
+                          var account = new Checking(500);
+                          account.deposit(1000);
+                          print(account.toString()); // Balance: 1500
+                          account.withdraw(750);
+                          print(account.toString()); // Balance: 750
+                          account.withdraw(800); // displays "Insufficient funds"
+                          print(account.toString()); // Balance: 750</code>
+        </section>
+        <section id="Summary" class="main-section">
+            <header>Summary</header>
+            <p> This chapter provided an overview of the way we use JavaScript throughout the rest of
+              the book. We try to follow a programming style that is common to many programmers
+              who are accustomed to using C-style languages such as C++ and Java. Of course, Java
+             Script has many conventions that do not follow the rules of those languages, and we
+              certainly point those out (such as the declaration and use of variables) and show you
+              the correct way to use the language. We also follow as many of the good JavaScript
+              programming practices outlined by authors such as John Resig, Douglas Crockford,
+              and others as we can. As responsible programmers, we need to keep in mind that it is
+              just as important that our programs be readable by humans as it is that they be correctly
+              executed by computers</p>
+        </section>
+    </main>
+</body>
