@@ -113,6 +113,20 @@ body {
   flex-wrap: wrap;
 }
 
+.pro_pic {
+  justify-content: center;
+  width: fit-content;
+
+  img {
+    border-radius: 10px;
+    height: auto;
+
+    &:hover {
+      box-shadow: 2px 2px rgb(0, 88, 250);
+    }
+  }
+}
+
 .profile-pic {
   width: 160px;
   height: 160px;
