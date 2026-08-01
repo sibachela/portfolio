@@ -10,10 +10,11 @@
   <body>
    <img src="me.jpg">
    <h2 id="count-el" onclick="incremet()">0</h2>
-    <input type="search" placeholder="search here">
-    <button id="google search" onclick="show()"> search
-    </button>
-    <button id="rest" onclick="rester()">i'm feeling lucky</button>
+   <form action="https://google.com/search" method="get" role="search">
+        <input name="q" type="search" placeholder="search here">
+        <button type="submit" id="google search" onclick="show()"> search</button>
+        <button id="rest" onclick="rester()">i'm feeling lucky</button>
+   </form>
     <script src="index.js">;
     </script>
     <div class="list">
@@ -34,5 +35,5 @@
     </div>
    
   </body>
-  <footer>Page creator:<a href="https://sibachela.github.io/portfolio/" target="_blank">Isaac sibachela</a> </footer> 
+  <footer>Page creator:<a href="https://portfolio.isaacsibachela.workers.dev/" target="_blank">Isaac sibachela</a> </footer> 
 </html>
